@@ -32,4 +32,6 @@
     <aop:config>
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.taotao.service.*.*(..))"/>
     </aop:config>
+    <!--&lt;!&ndash; 开启事务控制的注解支持 &ndash;&gt;
+    <tx:annotation-driven transaction-manager="transactionManager"/>-->
 </beans>
