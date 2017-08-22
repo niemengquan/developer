@@ -8,7 +8,7 @@
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>
 </welcome-file-list>
-<!--    &lt;!&ndash; 加载spring容器 &ndash;&gt;
+    <!-- 加载spring容器 -->
 <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring/applicationContext-*.xml</param-value>
@@ -16,7 +16,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    &lt;!&ndash;全局设置：解决post乱码&ndash;&gt;
+    <!--全局设置：解决post乱码-->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -30,11 +30,11 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    &lt;!&ndash; springmvc的前端控制器 &ndash;&gt;
+    <!-- springmvc的前端控制器 -->
     <servlet>
         <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        &lt;!&ndash; contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" &ndash;&gt;
+        <!-- contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:spring/springmvc.xml</param-value>
@@ -43,6 +43,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>-->
+        <url-pattern>/search/*</url-pattern>
+    </servlet-mapping>
 </web-app>
