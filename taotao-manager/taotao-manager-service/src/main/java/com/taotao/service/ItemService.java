@@ -1,6 +1,9 @@
 package com.taotao.service;
 
 import com.taotao.common.pojo.EasyUiListResult;
+import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.pojo.TbItem;
+import com.taotao.pojo.TbItemDesc;
 
 /**
  * 商品列表服务接口
@@ -15,4 +18,12 @@ public interface ItemService {
      * @throws Exception
      */
     EasyUiListResult getItemList(Integer page,Integer rows) throws Exception;
+
+    /**
+     * 保存一条商品信息
+     * @param item
+     * @param itemDesc
+     * @return
+     */
+    TaotaoResult addItem(TbItem item, TbItemDesc itemDesc);
 }
