@@ -1,6 +1,7 @@
 package com.taotao.search.service;
 
 import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.search.pojo.SearchResult;
 
 /**
  * Created by niemengquan on 2017/8/22.
@@ -12,4 +13,13 @@ public interface SearchService {
      * @return
      */
     TaotaoResult initSolrIndexFull();
+
+    /**
+     * 执行查询
+     * @param queryStr 查询字符串
+     * @param page 当前页数
+     * @param rows
+     * @return
+     */
+    SearchResult search(String queryStr,int page,int rows) throws Exception;
 }

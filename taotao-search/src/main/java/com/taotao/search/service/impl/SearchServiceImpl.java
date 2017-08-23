@@ -3,10 +3,13 @@ package com.taotao.search.service.impl;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.ExceptionUtil;
 import com.taotao.pojo.TbItem;
+import com.taotao.search.dao.SearchDao;
 import com.taotao.search.mapper.ItemMapper;
 import com.taotao.search.pojo.Item;
+import com.taotao.search.pojo.SearchResult;
 import com.taotao.search.service.SearchService;
 import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,8 @@ public class SearchServiceImpl implements SearchService {
     private ItemMapper itemMapper;
     @Autowired
     private SolrClient solrClient;
+    @Autowired
+    private SearchDao searchDao;
 
     @Override
     public TaotaoResult initSolrIndexFull() {
@@ -55,5 +60,34 @@ public class SearchServiceImpl implements SearchService {
         }
 
         return TaotaoResult.ok();
+    }
+
+    @Override
+    public SearchResult search(String queryStr, int page, int rows) throws Exception {
+        //创建查询对象
+        SolrQuery query=new SolrQuery();
+        //设置查询条件
+        query.setQuery(queryStr);
+        //设置分页
+        query.setStart((page-1)*rows);
+        query.setRows(rows);
+        //设置默认搜索域
+        query.set("df","item_keywords");
+        //设置高亮显示
+        query.setHighlight(true);
+        query.addHighlightField("item_title");
+        query.setHighlightSimplePre("<em style=\"color:red\"/>");
+        query.setHighlightSimplePost("</em>");
+        //执行查询
+        SearchResult searchResult = searchDao.search(query);
+        //计算查询结果总页数
+        long recordCount = searchResult.getRecordCount();
+        long pageCount=recordCount/rows;
+        if(pageCount%rows >0){
+            pageCount++;
+        }
+        searchResult.setPageCount(pageCount);
+        searchResult.setCurPage(page);
+        return searchResult;
     }
 }
