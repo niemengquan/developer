@@ -13,10 +13,9 @@
         </tr>
     </thead>
 </table>
-<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/item-edit'" style="width:80%;height:80%;padding:10px;">
-</div>
+<%--<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/item-edit'" style="width:80%;height:80%;padding:10px;">
+</div>--%>
 <script>
-
 	function formatItemParamData(value , index){
 		var json = JSON.parse(value);
 		var array = [];
@@ -49,7 +48,18 @@
         text:'编辑',
         iconCls:'icon-edit',
         handler:function(){
-        	$.messager.alert('提示','该功能未实现!');
+            var ids = getSelectionsIds();
+            if(ids.length == 0){
+                $.messager.alert('提示','必须选择一个商品才能编辑!');
+                return ;
+            }
+            if(ids.indexOf(',') > 0){
+                $.messager.alert('提示','只能选择一个商品规格!');
+                return ;
+            }
+            TAOTAO.createWindow({
+                url : "/item/param/edit/"+ids
+            });
         }
     },{
         text:'删除',
