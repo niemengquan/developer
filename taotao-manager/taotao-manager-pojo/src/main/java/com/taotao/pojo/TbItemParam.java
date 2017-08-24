@@ -6,7 +6,7 @@ public class TbItemParam {
     private Long id;
 
     private Long itemCatId;
-
+    private String itemCatName;//商品类目名称
     private Date created;
 
     private Date updated;
@@ -51,5 +51,13 @@ public class TbItemParam {
 
     public void setParamData(String paramData) {
         this.paramData = paramData == null ? null : paramData.trim();
+    }
+
+    public String getItemCatName() {
+        return itemCatName;
+    }
+
+    public void setItemCatName(String itemCatName) {
+        this.itemCatName = itemCatName;
     }
 }
