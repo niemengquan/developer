@@ -248,4 +248,34 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <!--自己加入的定制性的sql-->
+  <select id="selectByExampleWithBLOBsAndItemCat" resultType="com.taotao.pojo.TbItemParam" parameterType="com.taotao.pojo.TbItemParamExample" >
+    select
+    tip.id,
+    tip.item_cat_id,
+    tip.param_data,
+    tip.created,
+    tip.updated
+    ,tic.NAME itemCatName
+    from tb_item_param tip  inner join tb_item_cat tic on tip.item_cat_id=tic.id
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKeyWithItemCat" resultType="com.taotao.pojo.TbItemParam" parameterType="java.lang.Long" >
+    select
+    tip.id,
+    tip.item_cat_id,
+    tip.param_data,
+    tip.created,
+    tip.updated
+    ,tic.NAME itemCatName
+    from tb_item_param tip
+    inner join tb_item_cat tic on tip.item_cat_id=tic.id
+    where tip.id = #{id,jdbcType=BIGINT}
+  </select>
 </mapper>
