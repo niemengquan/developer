@@ -34,4 +34,18 @@ public interface TbItemParamMapper {
     int updateByPrimaryKeyWithBLOBs(TbItemParam record);
 
     int updateByPrimaryKey(TbItemParam record);
+
+    /**
+     *
+     * @param example
+     * @return
+     */
+    List<TbItemParam> selectByExampleWithBLOBsAndItemCat(TbItemParamExample example);
+
+    /**
+     * 查询商品的规格包含分类名称
+     * @param id
+     * @return
+     */
+    TbItemParam selectByPrimaryKeyWithItemCat(Long id);
 }
