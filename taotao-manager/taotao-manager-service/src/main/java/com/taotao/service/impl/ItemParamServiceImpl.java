@@ -29,7 +29,7 @@ public class ItemParamServiceImpl implements ItemParamService{
         TbItemParamExample example=new TbItemParamExample();
         TbItemParamExample.Criteria criteria = example.createCriteria();
         criteria.andItemCatIdEqualTo(cid);
-        List<TbItemParam> tbItemParams = this.itemParamMapper.selectByExample(example);
+        List<TbItemParam> tbItemParams = this.itemParamMapper.selectByExampleWithBLOBs(example);
         //判断是否有查询结果
         if(tbItemParams!=null && tbItemParams.size()>0){
             return TaotaoResult.ok(tbItemParams.get(0));
