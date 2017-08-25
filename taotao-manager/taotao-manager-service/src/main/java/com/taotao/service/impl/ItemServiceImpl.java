@@ -7,9 +7,11 @@ import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.IDUtils;
 import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
+import com.taotao.mapper.TbItemParamItemMapper;
 import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemDesc;
 import com.taotao.pojo.TbItemExample;
+import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,8 @@ public class ItemServiceImpl implements ItemService {
     private TbItemMapper itemMapper;
     @Autowired
     private TbItemDescMapper itemDescMapper;
+    @Autowired
+    private TbItemParamItemMapper itemParamItemMapper;
     @Override
     public EasyUiListResult getItemList(Integer page, Integer rows) throws Exception {
 
@@ -43,7 +47,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public TaotaoResult addItem(TbItem item, TbItemDesc itemDesc) {
+    public TaotaoResult addItem(TbItem item, TbItemDesc itemDesc,String itemParams) {
         //1.保存商品信息
         //其中商品的title，sell_point,price,num,barcode,image,cid等信息有页面传入
         //这里只需补全商品的其他信息
@@ -61,6 +65,13 @@ public class ItemServiceImpl implements ItemService {
         itemDesc.setUpdated(date);
         //将描述信息保存到商品描述表中
         this.itemDescMapper.insert(itemDesc);
+        //3.保存商品的规格信息
+        TbItemParamItem itemParamItem=new TbItemParamItem();
+        itemParamItem.setItemId(item.getId());
+        itemParamItem.setParamData(itemParams);
+        itemParamItem.setCreated(date);
+        itemParamItem.setUpdated(date);
+        this.itemParamItemMapper.insert(itemParamItem);
         return TaotaoResult.ok();
     }
 }

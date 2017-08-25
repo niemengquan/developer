@@ -23,7 +23,8 @@ public interface ItemService {
      * 保存一条商品信息
      * @param item
      * @param itemDesc
+     * @param itemParams
      * @return
      */
-    TaotaoResult addItem(TbItem item, TbItemDesc itemDesc);
+    TaotaoResult addItem(TbItem item, TbItemDesc itemDesc,String itemParams);
 }
