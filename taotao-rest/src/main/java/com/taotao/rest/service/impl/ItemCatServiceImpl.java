@@ -1,13 +1,17 @@
 package com.taotao.rest.service.impl;
 
+import com.taotao.common.utils.JsonUtils;
 import com.taotao.mapper.TbItemCatMapper;
 import com.taotao.pojo.TbItemCat;
 import com.taotao.pojo.TbItemCatExample;
+import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.pojo.CatNode;
 import com.taotao.rest.pojo.CatResult;
 import com.taotao.rest.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +24,24 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Autowired
     private TbItemCatMapper itemCatMapper;
 
+    @Autowired
+    private JedisClient jedisClient;
+
+    @Value("${REDIS_ITEM_CAT_KEY}")
+    private String REDIS_ITEM_CAT_KEY;
+
     @Override
     public CatResult getItemCatList() {
         CatResult catResult=new CatResult();
-        catResult.setData(getCatList(0l));
+        String resultJson = jedisClient.hget(REDIS_ITEM_CAT_KEY, "0");
+        if(!StringUtils.isEmpty(resultJson)){
+            List<CatNode> catNodes = JsonUtils.jsonToList(resultJson, CatNode.class);
+            catResult.setData(catNodes);
+            return catResult;
+        }
+        List<?> catList = getCatList(0l);
+        catResult.setData(catList);
+        jedisClient.hset(REDIS_ITEM_CAT_KEY,"0",JsonUtils.objectToJson(catList));
         return catResult;
     }
 
