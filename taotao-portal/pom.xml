@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.taotao</groupId>
-    <artifactId>taotao-protal</artifactId>
+    <artifactId>taotao-portal</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>taotao-protal Maven Webapp</name>
+    <name>taotao-portal Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -65,9 +65,13 @@
             <artifactId>jsp-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
     </dependencies>
     <build>
-        <finalName>taotao-protal</finalName>
+        <finalName>taotao-portal</finalName>
         <!-- 配置插件 -->
         <plugins>
             <plugin>
