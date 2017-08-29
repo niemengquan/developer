@@ -191,6 +191,7 @@
                 <version>${solrj.version}</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <build>
