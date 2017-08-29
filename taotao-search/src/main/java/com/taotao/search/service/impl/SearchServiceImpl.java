@@ -40,14 +40,7 @@ public class SearchServiceImpl implements SearchService {
             //把商品信息写入索引库
             for (Item item : items) {
                 //创建一个SolrInputDocument 对象
-                SolrInputDocument document = new SolrInputDocument();
-                document.setField("id", item.getId());
-                document.setField("item_title", item.getTitle());
-                document.setField("item_sell_point", item.getSellPoint());
-                document.setField("item_price", item.getPrice());
-                document.setField("item_image", item.getImage());
-                document.setField("item_category_name", item.getCategoryName());
-                document.setField("item_desc", item.getItemDes());
+                SolrInputDocument document = setSolrInputFields(item);
                 //写入索引库
                 solrClient.add(document);
             }
@@ -89,5 +82,47 @@ public class SearchServiceImpl implements SearchService {
         searchResult.setPageCount(pageCount);
         searchResult.setCurPage(page);
         return searchResult;
+    }
+
+    @Override
+    public TaotaoResult addSolrIndexForItem(Item item) {
+        try {
+            SolrInputDocument document = setSolrInputFields(item);
+            //写入索引库
+            solrClient.add(document);
+            solrClient.commit();
+        }catch (Exception err){
+            err.printStackTrace();
+            return TaotaoResult.build(500, ExceptionUtil.getStackTrace(err));
+        }
+        return TaotaoResult.ok();
+    }
+
+    private SolrInputDocument setSolrInputFields(Item item) {
+        //创建一个SolrInputDocument 对象
+        SolrInputDocument document = new SolrInputDocument();
+        document.setField("id", item.getId());
+        document.setField("item_title", item.getTitle());
+        document.setField("item_sell_point", item.getSellPoint());
+        document.setField("item_price", item.getPrice());
+        document.setField("item_image", item.getImage());
+        document.setField("item_category_name", item.getCategoryName());
+        document.setField("item_desc", item.getItemDes());
+        return document;
+    }
+
+    @Override
+    public TaotaoResult deleteSolrIndexById(String id) {
+        try {
+            this.solrClient.deleteById(id);
+            this.solrClient.commit();
+        } catch (SolrServerException e) {
+            e.printStackTrace();
+            return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+        }
+        return TaotaoResult.ok();
     }
 }

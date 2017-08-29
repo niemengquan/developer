@@ -2,6 +2,8 @@ package com.taotao.search.controller;
 
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.ExceptionUtil;
+import com.taotao.common.utils.JsonUtils;
+import com.taotao.search.pojo.Item;
 import com.taotao.search.pojo.SearchResult;
 import com.taotao.search.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +56,32 @@ public class SearchController {
             return TaotaoResult.build(500, ExceptionUtil.getStackTrace(err));
         }
         return TaotaoResult.ok(searchResult);
+    }
+
+    /**
+     * 增加商品的索引信息
+     * @param itemJson
+     * @return
+     */
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @ResponseBody
+    public  TaotaoResult addItemIndex(String itemJson){
+        if(itemJson==null || itemJson.equals("")){
+            return TaotaoResult.build(500, "必须传入商品的json信息");
+        }
+        Item item = JsonUtils.jsonToPojo(itemJson, Item.class);
+        TaotaoResult taotaoResult = this.searchService.addSolrIndexForItem(item);
+        return taotaoResult;
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public  TaotaoResult deleteItemIndexById(String id){
+        if(id==null || id.equals("")){
+            return TaotaoResult.build(500, "必须传入商品的json信息");
+        }
+        TaotaoResult taotaoResult = this.searchService.deleteSolrIndexById(id);
+        return taotaoResult;
     }
 
 }
