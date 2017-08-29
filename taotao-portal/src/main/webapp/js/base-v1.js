@@ -27,18 +27,18 @@ function readCookie(a) {
     return null
 }
 function addToFavorite() {
-    var a = "http://www.jd.com/", b = "\u4eac\u4e1cJD.COM-\u7f51\u8d2d\u4e0a\u4eac\u4e1c\uff0c\u7701\u94b1\u53c8\u653e\u5fc3";
-    document.all ? window.external.AddFavorite(a, b) : window.sidebar && window.sidebar.addPanel ? window.sidebar.addPanel(b, a, "") : alert("\u5bf9\u4e0d\u8d77\uff0c\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u64cd\u4f5c!\n\u8bf7\u60a8\u4f7f\u7528\u83dc\u5355\u680f\u6216Ctrl+D\u6536\u85cf\u672c\u7ad9\u3002"), createCookie("_fv", "1", 30, "/;domain=jd.com")
+    var a = "http://www.tt.com/", b = "\u4eac\u4e1cJD.COM-\u7f51\u8d2d\u4e0a\u4eac\u4e1c\uff0c\u7701\u94b1\u53c8\u653e\u5fc3";
+    document.all ? window.external.AddFavorite(a, b) : window.sidebar && window.sidebar.addPanel ? window.sidebar.addPanel(b, a, "") : alert("\u5bf9\u4e0d\u8d77\uff0c\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u64cd\u4f5c!\n\u8bf7\u60a8\u4f7f\u7528\u83dc\u5355\u680f\u6216Ctrl+D\u6536\u85cf\u672c\u7ad9\u3002"), createCookie("_fv", "1", 30, "/;domain=tt.com")
 }
 function search(a) {
-    var b = "http://localhost:8082/search.html?q=" + encodeURIComponent(document.getElementById(a).value);
+    var b = "http://localhost:8084/search.html?q=" + encodeURIComponent(document.getElementById(a).value);
     return window.location.href = b;
 }
 window.pageConfig = window.pageConfig || {}, pageConfig.wideVersion = function() {
     return screen.width >= 1210
 }(), pageConfig.wideVersion && pageConfig.compatible && (document.getElementsByTagName("body")[0].className = "root61"), pageConfig.FN_getDomain = function() {
     var a = location.hostname;
-    return /360buy.com/.test(a) ? "360buy.com" : "jd.com"
+    return /tt.com/.test(a) ? "tt.com" : "tt.com"
 }, pageConfig.FN_GetUrl = function(a, b) {
     return "string" == typeof a ? a : pageConfig.FN_GetDomain(a) + b + ".html"
 }, pageConfig.FN_StringFormat = function() {
@@ -48,7 +48,7 @@ window.pageConfig = window.pageConfig || {}, pageConfig.wideVersion = function()
             a = a.replace(new RegExp("\\{" + c + "\\}", "g"), arguments[c + 1]);
     return a
 }, pageConfig.FN_GetDomain = function(a) {
-    var b = "http://{0}.jd.com/{1}";
+    var b = "http://{0}.tt.com/{1}";
     switch (a) {
         case 1:
             b = this.FN_StringFormat(b, "item", "");
@@ -153,9 +153,9 @@ window.pageConfig = window.pageConfig || {}, pageConfig.wideVersion = function()
     return Math.abs(c(a)) % b
 }, pageConfig.goToMobile = function() {
     var a, b = navigator.userAgent.toLowerCase(), c = document.referrer, d = /ipad/, e = /mobile|ios|iphone|android|windows phone|uc|mqqbrowser/, f = readCookie("goToMobile"), g = document.getElementById("shortcut-2013"), h = document.createElement("div");
-    h.className = "w", h.innerHTML = '<div id="m-tips" style="white-space:nowrap;padding:4px 0;">\u60a8\u6b63\u5728\u7528\u624b\u673a\u8bbf\u95ee\u7535\u8111\u7248\u4eac\u4e1c\uff0c\u4e3a\u4e86\u4fdd\u8bc1\u6700\u4f73\u6d4f\u89c8\u6548\u679c\uff0c\u5efa\u8bae\u60a8\u8bbf\u95ee\u89e6\u5c4f\u7248\u3002<a href="#none" id="back-to-m" style="color:#005EA7;">[\u5207\u6362\u81f3\u89e6\u5c4f\u7248]</a></div>', /m\.jd\.com/.test(c) ? (createCookie("goToMobile", "2", 10, "/;domain=www.jd.com"), document.getElementById("m-tips") || (g.parentNode.insertBefore(h, g), a = document.getElementById("back-to-m"), a.onclick = function() {
-        createCookie("goToMobile", "1", 10, "/;domain=www.jd.com"), location.href = "http://m.jd.com"
-    })) : f ? "1" === f && (location.href = "http://m.jd.com/") : e.test(b) && !d.test(b) ? (createCookie("goToMobile", "1", 10, "/;domain=www.jd.com"), location.href = "http://m.jd.com/") : createCookie("goToMobile", "0", 10, "/;domain=www.jd.com")
+    h.className = "w", h.innerHTML = '<div id="m-tips" style="white-space:nowrap;padding:4px 0;">\u60a8\u6b63\u5728\u7528\u624b\u673a\u8bbf\u95ee\u7535\u8111\u7248\u4eac\u4e1c\uff0c\u4e3a\u4e86\u4fdd\u8bc1\u6700\u4f73\u6d4f\u89c8\u6548\u679c\uff0c\u5efa\u8bae\u60a8\u8bbf\u95ee\u89e6\u5c4f\u7248\u3002<a href="#none" id="back-to-m" style="color:#005EA7;">[\u5207\u6362\u81f3\u89e6\u5c4f\u7248]</a></div>', /m\.jd\.com/.test(c) ? (createCookie("goToMobile", "2", 10, "/;domain=www.tt.com"), document.getElementById("m-tips") || (g.parentNode.insertBefore(h, g), a = document.getElementById("back-to-m"), a.onclick = function() {
+        createCookie("goToMobile", "1", 10, "/;domain=www.tt.com"), location.href = "http://m.tt.com"
+    })) : f ? "1" === f && (location.href = "http://m.tt.com/") : e.test(b) && !d.test(b) ? (createCookie("goToMobile", "1", 10, "/;domain=www.tt.com"), location.href = "http://m.tt.com/") : createCookie("goToMobile", "0", 10, "/;domain=www.tt.com")
 };
 var CookieUtil = {};
 CookieUtil.setASCIICookie = function(a, b, c, d, e, f) {

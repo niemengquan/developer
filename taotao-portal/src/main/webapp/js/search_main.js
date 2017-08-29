@@ -252,7 +252,7 @@ window.searchlog = function() {
         var g = encodeURIComponent(m) + "^#psort#^#page#^#cid#^" + encodeURIComponent(window.location.href);
         n.keyword = m
     }
-    var b = "http://sstat.jd.com/scslog?args=", c = k.length, l;
+    var b = "http://sstat.tt.com/scslog?args=", c = k.length, l;
     if (c > 0) {
         if (k[0] == 0) {
             n.front_cost = LogParm.front_cost = LogParm.front_cost || "0";
@@ -447,7 +447,7 @@ SEARCH.track_iframe_onebox = function() {
 SEARCH.relate_search = {html: null,init: function() {
         if (this.html === null) {
             var a = QUERY_KEYWORD, b = this;
-            $.ajax({url: "http://qpsearch.jd.com/relationalSearch?keyword=" + encodeURIComponent(a).toLocaleLowerCase(),async: true,scriptCharset: "utf-8",dataType: "jsonp",success: function(c) {
+            $.ajax({url: "http://qpsearch.tt.com/relationalSearch?keyword=" + encodeURIComponent(a).toLocaleLowerCase(),async: true,scriptCharset: "utf-8",dataType: "jsonp",success: function(c) {
                     b.callback(c)
                 }})
         } else {
@@ -479,7 +479,7 @@ SEARCH.relate_search = {html: null,init: function() {
             this.html = ""
         }
     }};
-SEARCH.get_book_summary = {fragment: ['<div class="img"><img src="{img}" width="280" height="280" alt="" /></div><div class="text"><table cellpadding="0" cellspacing="0" border="0" width="100%">{detaile}</table></div>', '<div class="summary"><div class="i-summary"><div class="close" onclick="$(this).parent().parent().hide()"></div><div class="arrow"></div><div class="con"><div class="iloading">\u6b63\u5728\u52a0\u8f7d\u4e2d\uff0c\u8bf7\u7a0d\u5019...</div></div></div></div>', "<tr><td>{name}{value}</td></tr>"],dataUrl: "http://d.360buy.com/bookExt/get?skuId=",edataUrl: "http://e.jd.com/ebook/ExteBookService.aspx?stype=search&skuid=",setPosition: function(a) {
+SEARCH.get_book_summary = {fragment: ['<div class="img"><img src="{img}" width="280" height="280" alt="" /></div><div class="text"><table cellpadding="0" cellspacing="0" border="0" width="100%">{detaile}</table></div>', '<div class="summary"><div class="i-summary"><div class="close" onclick="$(this).parent().parent().hide()"></div><div class="arrow"></div><div class="con"><div class="iloading">\u6b63\u5728\u52a0\u8f7d\u4e2d\uff0c\u8bf7\u7a0d\u5019...</div></div></div></div>', "<tr><td>{name}{value}</td></tr>"],dataUrl: "http://d.tt.com/bookExt/get?skuId=",edataUrl: "http://e.tt.com/ebook/ExteBookService.aspx?stype=search&skuid=",setPosition: function(a) {
         var c = $(a.get(0)).position(), b = window.pageConfig.wideVersion ? 360 : 120;
         c.left > b && a.find(".summary").addClass("direct-left")
     },init: function() {
@@ -650,7 +650,7 @@ SEARCH.get_im_info = function(a, b) {
     if (!a || !b) {
         return
     }
-    $.ajax({url: "http://chat1.jd.com/api/checkChat?venderList=" + b,dataType: "jsonp",jsonp: "callback",scriptCharset: "utf-8",success: function(m) {
+    $.ajax({url: "http://chat1.tt.com/api/checkChat?venderList=" + b,dataType: "jsonp",jsonp: "callback",scriptCharset: "utf-8",success: function(m) {
             if (typeof (m) != "object") {
                 return
             }
@@ -692,7 +692,7 @@ SEARCH.get_im_info = function(a, b) {
                 g.seller = $.trim(s.seller);
                 g.venderId = s.venderId;
                 g.entry = "jd_search";
-                var c = "http://chat.jd.com/index.action?";
+                var c = "http://chat.tt.com/index.action?";
                 for (var p in g) {
                     c += p + "=" + encodeURI(encodeURI(g[p])) + "&"
                 }
@@ -775,7 +775,7 @@ SEARCH.bind_events = {iplocation: (function(e, k) {
                         k.json_city[String(o)] = s;
                         l(s, r, p, q)
                     };
-                    e.getJSONP("http://d.jd.com/area/get?fid=" + o + "&callback=getAreaList_callback")
+                    e.getJSONP("http://d.tt.com/area/get?fid=" + o + "&callback=getAreaList_callback")
                 } else {
                     l([], r, p, q)
                 }
@@ -1018,7 +1018,7 @@ SEARCH.bind_events = {iplocation: (function(e, k) {
                 return
             }
             if (p != "") {
-                m.util.sGetScript("http://bsearch.jd.com/?callback=brand_search_result&ids=" + m.brand_ids + "&key=" + encodeURIComponent(p), "UTF-8", true)
+                m.util.sGetScript("http://bsearch.tt.com/?callback=brand_search_result&ids=" + m.brand_ids + "&key=" + encodeURIComponent(p), "UTF-8", true)
             } else {
                 i.css("display", "block")
             }
@@ -1286,7 +1286,7 @@ SEARCH.page = function(b, a) {
     if (b < 1) {
         b = 1
     }
-    window.location = "http://localhost:8082/search.html?q="+SEARCH.query+"&page="+b;
+    window.location = "http://localhost:8084/search.html?q="+SEARCH.query+"&page="+b;
 //    if (a) {
 //        window.scrollTo(0, $("#filter").offset().top)
 //    }
@@ -1701,7 +1701,7 @@ function surveyShow() {
 function ebook_download(b, a) {
     $.login({modal: true,complete: function(c) {
             if (c != null && c.IsAuthenticated != null && c.IsAuthenticated) {
-                var d = "http://gw.e.jd.com/downrecord/downrecord_insert.action?ebookId=" + b + "&key=" + a + "&callback=?";
+                var d = "http://gw.e.tt.com/downrecord/downrecord_insert.action?ebookId=" + b + "&key=" + a + "&callback=?";
                 $.getJSON(d, function(f) {
                     if (f.code == 1) {
                         var e = confirm("如您已安装京东LeBook客户端，请点击“确定”自动启动客户端\n如您尚未安装京东LeBook客户端，请点击“取消”将引导您免费安装客户端");
@@ -1709,7 +1709,7 @@ function ebook_download(b, a) {
                             window.location = "LEBK:///Bought"
                         } else {
                             if (confirm('如果您没有安装LeBook客户端，请点击"确定"按钮到京东网站下载\n如果您不需要安装，请点击"取消"按钮')) {
-                                window.open("http://e.jd.com/ebook/lebook_pc.aspx")
+                                window.open("http://e.tt.com/ebook/lebook_pc.aspx")
                             }
                         }
                         return
@@ -1726,7 +1726,7 @@ SEARCH.get_digital_price = function(b, a) {
     })
 };
 SEARCH.get_ware_stock = function(b, a) {
-    $.getJSON("http://search.jd.com/stock?skus=" + b.replace(/J_/g, "") + "&district=" + a.split("-").slice(0, 3).join("_") + "&callback=?", function(c) {
+    $.getJSON("http://search.tt.com/stock?skus=" + b.replace(/J_/g, "") + "&district=" + a.split("-").slice(0, 3).join("_") + "&callback=?", function(c) {
         SEARCH.set_ware_stock_data(c)
     })
 };
@@ -1741,7 +1741,7 @@ SEARCH.get_prompt_flag = function(a) {
     })
 };
 SEARCH.get_comment_nums = function(a, b) {
-    $.getJSON("http://club.jd.com/clubservice/summary-m-" + a.replace(/J_/g, "") + ".html?callback=?", function(c) {
+    $.getJSON("http://club.tt.com/clubservice/summary-m-" + a.replace(/J_/g, "") + ".html?callback=?", function(c) {
         SEARCH.set_comment_nums_data(c, b)
     })
 };
@@ -1777,7 +1777,7 @@ SEARCH.get_presale_info = function() {
         if (!g) {
             return false
         }
-        $.getJSON("http://soa.yushou.jd.com/yushoulistinfo.action?sku=" + g + "&callback=?", function(o) {
+        $.getJSON("http://soa.yushou.tt.com/yushoulistinfo.action?sku=" + g + "&callback=?", function(o) {
             if (typeof (o) != "object" || o.type == "1" || !o.ret) {
                 return false
             }
@@ -2030,7 +2030,7 @@ SEARCH.get_ware_info_merge = function(e, c) {
     for (var d = 1, a = f.apiArray.length - 1; d <= a; d = d * 2) {
         f.apiArray[d][3] = false
     }
-    $.getJSONP("http://search.jd.com/mergesearch?skuids=" + b + "&apiType=1,2,4,8,16&area=" + c.split("-").slice(0, 3).join("_") + "&callback=SEARCH.jsonpcallback");
+    $.getJSONP("http://search.tt.com/mergesearch?skuids=" + b + "&apiType=1,2,4,8,16&area=" + c.split("-").slice(0, 3).join("_") + "&callback=SEARCH.jsonpcallback");
     setTimeout(function() {
         for (var j = 1, h, g = f.apiArray.length - 1; j <= g; j = j * 2) {
             if (f.apiArray[j][3] == false) {
@@ -2117,7 +2117,7 @@ SEARCH.get_baby_info = function() {
     }
     function g(l, k) {
         var m = l + "-" + c + "-" + h + "-" + k;
-        $.ajax({url: "http://uprofile.jd.com/u/baby/setinfo?babyinfo=" + m,async: true,dataType: "jsonp",success: function(o) {
+        $.ajax({url: "http://uprofile.tt.com/u/baby/setinfo?babyinfo=" + m,async: true,dataType: "jsonp",success: function(o) {
                 if (!o || o.flag != 2) {
                     alert("Joy,没记住您的选择...");
                     return
@@ -2131,7 +2131,7 @@ SEARCH.get_baby_info = function() {
                 }
             }})
     }
-    $.ajax({url: "http://uprofile.jd.com/u/baby/getinfo?callback=?",async: true,dataType: "jsonp",success: function(l) {
+    $.ajax({url: "http://uprofile.tt.com/u/baby/getinfo?callback=?",async: true,dataType: "jsonp",success: function(l) {
             var l = l.babyinfo.split("-");
             if (!l || !l[0]) {
                 j.removeClass("hide").find(".query-con").removeClass("hide");
@@ -2184,13 +2184,13 @@ SEARCH.get_baby_info = function() {
         jdModelCallCenter.settings.fn = function() {
             g(f, a)
         };
-        $.getJSON("http://passport.jd.com/loginservice.aspx?method=Login&callback=?", function(l) {
+        /*$.getJSON("http://passport.tt.com/loginservice.aspx?method=Login&callback=?", function(l) {
             if (l && l.Identity && l.Identity.IsAuthenticated) {
                 g(f, a)
             } else {
                 jdModelCallCenter.login()
             }
-        });
+        });*/
         $(".Jcalendar").remove()
     })
 };
@@ -2220,7 +2220,7 @@ SEARCH.get_paipai_ware = function(c) {
 };
 SEARCH.get_adv_info = function(f, d, c, b, e) {
     var g = this, a = encodeURIComponent(window.REAL_KEYWORD || window.QUERY_KEYWORD);
-    $.ajax({url: "http://x.jd.com/Search?ad_type=7&ad_ids=291:" + f + ",292:4&keyword=" + a + "&page=" + d + "&urlcid3=" + c,dataType: "jsonp",success: function(s) {
+    $.ajax({url: "http://x.tt.com/Search?ad_type=7&ad_ids=291:" + f + ",292:4&keyword=" + a + "&page=" + d + "&urlcid3=" + c,dataType: "jsonp",success: function(s) {
             if (typeof (s) != "object" || !s["291"].length && !s["292"].length) {
                 $("#ad_left").html("").hide();
                 $("#shop-choice").html("").hide();
@@ -2287,7 +2287,7 @@ SEARCH.init = function(page, total_page, result_count, sort, scroll, shop_id, ci
     this.get_ware_info(), this.get_shop_info(shop_id), this.get_multi_shops(), this.bind_events.init(), this.relate_search.init(), this.top_page_html(page, total_page, result_count, scroll), this.bottom_page_html(page, total_page, scroll), this.sort_html(sort), this.image_scroll('#plist li:not([done="1"]) .p-scroll');
     this.get_paipai_ware(paipai);
     $.delayLoad(true, "script/digital_music_download.js?100.js", "utf-8", "", 'li[e-tag!="1"] a.free-download');
-    $.ajax({url: "http://x.jd.com/ShowInterface?ad_ids=86:1,62:1," + (window.pageConfig.wideVersion ? 93 : 87) + ":1&urlcid3=" + cid + "&ad_type=8&spread_type=1",dataType: "jsonp",success: function(data) {
+    $.ajax({url: "http://x.tt.com/ShowInterface?ad_ids=86:1,62:1," + (window.pageConfig.wideVersion ? 93 : 87) + ":1&urlcid3=" + cid + "&ad_type=8&spread_type=1",dataType: "jsonp",success: function(data) {
             if (typeof (data) != "object") {
                 return false
             }
@@ -2309,7 +2309,7 @@ SEARCH.init = function(page, total_page, result_count, sort, scroll, shop_id, ci
     $("#sidepanel").find("a.gotop").attr("href", "javascript:void(0)").click(function() {
         window.scrollTo(0, 0)
     });
-    $.ajax({url: "http://guang.jd.com/init/",dataType: "jsonp",success: function(data) {
+    $.ajax({url: "http://guang.tt.com/init/",dataType: "jsonp",success: function(data) {
             eval(data)
         }})
 };
@@ -2406,7 +2406,7 @@ $(window).scroll(function() {
         }};
     a.insertStyles("._gemini_inject_label_sousuo{display:block !important;} ._ads_sousuo,._no-ads_sousuo{display:none !important;}");
 //    var b = ["2_164_5467", "2_164_5470"];
-//    $.ajax({url: "http://nfa.jd.com/loadFa_toJson.js?aid=" + b.join("-") + "&ver=20140526",dataType: "script",cache: true,success: function() {
+//    $.ajax({url: "http://nfa.tt.com/loadFa_toJson.js?aid=" + b.join("-") + "&ver=20140526",dataType: "script",cache: true,success: function() {
 //            a.insertScript("http://static.360buyimg.com/gemini/gemini/gemini_v2.2.1.js", {id: "1401071931558",name: "gemini_divide_script",charset: "utf-8",divideType: "MODULE_INJECT",param: "[{t:'sousuo'}]"})
 //        }})
 })();

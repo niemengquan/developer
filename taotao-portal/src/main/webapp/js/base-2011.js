@@ -27,11 +27,11 @@ function readCookie(a) {
     return null
 }
 function addToFavorite() {
-    var a = "http://www.jd.com/", b = "\u4eac\u4e1cJD.COM-\u7f51\u8d2d\u4e0a\u4eac\u4e1c\uff0c\u7701\u94b1\u53c8\u653e\u5fc3";
-    document.all ? window.external.AddFavorite(a, b) : window.sidebar && window.sidebar.addPanel ? window.sidebar.addPanel(b, a, "") : alert("\u5bf9\u4e0d\u8d77\uff0c\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u64cd\u4f5c!\n\u8bf7\u60a8\u4f7f\u7528\u83dc\u5355\u680f\u6216Ctrl+D\u6536\u85cf\u672c\u7ad9\u3002"), createCookie("_fv", "1", 30, "/;domain=jd.com")
+    var a = "http://www.tt.com/", b = "\u4eac\u4e1cJD.COM-\u7f51\u8d2d\u4e0a\u4eac\u4e1c\uff0c\u7701\u94b1\u53c8\u653e\u5fc3";
+    document.all ? window.external.AddFavorite(a, b) : window.sidebar && window.sidebar.addPanel ? window.sidebar.addPanel(b, a, "") : alert("\u5bf9\u4e0d\u8d77\uff0c\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u64cd\u4f5c!\n\u8bf7\u60a8\u4f7f\u7528\u83dc\u5355\u680f\u6216Ctrl+D\u6536\u85cf\u672c\u7ad9\u3002"), createCookie("_fv", "1", 30, "/;domain=tt.com")
 }
 function search(a) {
-    var b = "http://search.jd.com/Search?keyword={keyword}&enc={enc}{additional}", c = search.additinal || "", d = document.getElementById(a), e = d.value;
+    var b = "http://search.tt.com/Search?keyword={keyword}&enc={enc}{additional}", c = search.additinal || "", d = document.getElementById(a), e = d.value;
     if (e = e.replace(/^\s*(.*?)\s*$/, "$1"), e.length > 100 && (e = e.substring(0, 100)), "" == e)
         return window.location.href = window.location.href, void 0;
     var f = 0;
@@ -79,10 +79,10 @@ function search(a) {
                 case "82":
                     g = k.replace(/\{cid1}/g, "5275"), g = g.replace(/\[cid2]/, "%3Bcid2%2CL{cid}M{cid}")
             }
-            b = "http://search.e.jd.com/searchDigitalBook?ajaxSearch=0&enc=utf-8&key={keyword}&page=1{additional}";
+            b = "http://search.e.tt.com/searchDigitalBook?ajaxSearch=0&enc=utf-8&key={keyword}&page=1{additional}";
             break;
         case 6:
-            i = "-1", b = "http://music.jd.com/8_0_desc_0_0_1_15.html?key={keyword}"
+            i = "-1", b = "http://music.tt.com/8_0_desc_0_0_1_15.html?key={keyword}"
     }
     if ("string" == typeof h && "" != h && "string" == typeof i) {
         var l = /^(?:[1-8])?([1-3])$/;
@@ -126,7 +126,7 @@ function setWebBILinkCount(a) {
     try {
         if (a.length > 0) {
             var b = document.createElement("script");
-            b.type = "text/javascript", b.src = "http://counter.360buy.com/aclk.aspx?key=" + a, document.getElementsByTagName("head")[0].appendChild(b)
+            b.type = "text/javascript", b.src = "http://counter.tt.com/aclk.aspx?key=" + a, document.getElementsByTagName("head")[0].appendChild(b)
         }
     } catch (c) {
     }
@@ -161,13 +161,13 @@ function openCompare() {
             alert("\u5bf9\u4e0d\u8d77\uff0c\u6700\u5c11\u9009\u62e9\u4e24\u79cd\u5546\u54c1\u8fdb\u884c\u5bf9\u6bd4\uff01");
             break;
         case 2:
-            window.open("http://www.360buy.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1]);
+            window.open("http://www.tt.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1]);
             break;
         case 3:
-            window.open("http://www.360buy.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1] + "&s3=" + proIDs[2]);
+            window.open("http://www.tt.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1] + "&s3=" + proIDs[2]);
             break;
         case 4:
-            window.open("http://www.360buy.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1] + "&s3=" + proIDs[2] + "&s4=" + proIDs[3]);
+            window.open("http://www.tt.com/pcompare.aspx?s1=" + proIDs[0] + "&s2=" + proIDs[1] + "&s3=" + proIDs[2] + "&s4=" + proIDs[3]);
             break;
         default:
             return alert("\u8bf7\u9009\u62e92-4\u4ef6\u5546\u54c1\u8fdb\u884c\u5bf9\u6bd4\uff01"), void 0
@@ -237,7 +237,7 @@ window.pageConfig = window.pageConfig || {}, pageConfig.wideVersion = function()
     return screen.width >= 1210
 }(), pageConfig.wideVersion && pageConfig.compatible && (document.getElementsByTagName("body")[0].className = "root61"), pageConfig.FN_getDomain = function() {
     var a = location.hostname;
-    return /360buy.com/.test(a) ? "360buy.com" : "jd.com"
+    return /tt.com/.test(a) ? "tt.com" : "tt.com"
 }, pageConfig.FN_GetUrl = function(a, b) {
     return "string" == typeof a ? a : pageConfig.FN_GetDomain(a) + b + ".html"
 }, pageConfig.FN_StringFormat = function() {
@@ -247,7 +247,7 @@ window.pageConfig = window.pageConfig || {}, pageConfig.wideVersion = function()
             a = a.replace(new RegExp("\\{" + c + "\\}", "g"), arguments[c + 1]);
     return a
 }, pageConfig.FN_GetDomain = function(a) {
-    var b = "http://{0}.jd.com/{1}";
+    var b = "http://{0}.tt.com/{1}";
     switch (a) {
         case 1:
             b = this.FN_StringFormat(b, "item", "");
@@ -580,7 +580,7 @@ pannel.gotop = {settings: {element: null,target: "#header"},init: function(a, b)
             a = a.replace(new RegExp("\\{" + c + "\\}", "g"), arguments[c]);
     return a
 };
-var loguri = "http://csc.jd.com/log.ashx?type1=$type1$&type2=$type2$&data=$data$&pin=$pin$&referrer=$referrer$&callback=?";
+var loguri = "http://csc.tt.com/log.ashx?type1=$type1$&type2=$type2$&data=$data$&pin=$pin$&referrer=$referrer$&callback=?";
 callback1 = function() {
 }, log = function(a, b) {
     var c = "";
@@ -588,7 +588,7 @@ callback1 = function() {
         c = c + arguments[i] + "|||";
     var d = loguri.replace(/\$type1\$/, escape(a));
     d = d.replace(/\$type2\$/, escape(b)), d = d.replace(/\$data\$/, escape(c)), d = d.replace(/\$pin\$/, escape(decodeURIComponent(readCookie("pin")))), d = d.replace(/\$referrer\$/, escape(document.referrer)), $.getJSON(d, callback1);
-    var e = ("https:" == document.location.protocol ? "https://mercuryssl" : "http://mercury") + ".jd.com/log.gif" + "?t=other.000000" + "&m=UA-J2011-1" + "&v=" + encodeURIComponent("t1=" + a + "$t2=" + b + "$p0=" + c) + "&ref=" + encodeURIComponent(document.referrer) + "&rm=" + (new Date).getTime(), f = new Image(1, 1);
+    var e = ("https:" == document.location.protocol ? "https://mercuryssl" : "http://mercury") + ".tt.com/log.gif" + "?t=other.000000" + "&m=UA-J2011-1" + "&v=" + encodeURIComponent("t1=" + a + "$t2=" + b + "$p0=" + c) + "&ref=" + encodeURIComponent(document.referrer) + "&rm=" + (new Date).getTime(), f = new Image(1, 1);
     f.src = e
 }, mark = function(a, b) {
     log(1, b, a)
