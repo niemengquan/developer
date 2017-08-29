@@ -27,4 +27,11 @@ public interface ItemService {
      * @return
      */
     TaotaoResult addItem(TbItem item, TbItemDesc itemDesc,String itemParams);
+
+    /**
+     * 根据商品的id删除对应的商品
+     * @param ids
+     * @return
+     */
+    TaotaoResult deleteItemByIds(String[] ids);
 }
