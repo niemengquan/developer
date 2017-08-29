@@ -46,7 +46,7 @@
 		<div id="nav-2013">
 			<div id="categorys-2013" class="categorys-2014">
 				<div class="mt ld">
-					<h2><a href="http://www.jd.com/allSort.aspx" clstag="homepage|keycount|home2013|06a">全部商品分类<b></b></a></h2>
+					<h2><a href="http://www.tt.com/allSort.aspx" clstag="homepage|keycount|home2013|06a">全部商品分类<b></b></a></h2>
 				</div>
 				<div id="_JD_ALLSORT" class="mc">
 					<div class="item fore1">
@@ -135,19 +135,19 @@
 					</div>
 					<div class="extra">
 						<a {if="" pageconfig.ishome}clstag="homepage|keycount|home2013|0614a"
-							{="" if}="" href="http://www.jd.com/allSort.aspx">全部商品分类</a>
+							{="" if}="" href="http://www.tt.com/allSort.aspx">全部商品分类</a>
 					</div>
 				</div>
 			</div>
 			<div id="treasure" clstag="homepage|keycount|home2013|08a"></div>
 				<ul id="navitems-2013">
 					<li class="fore1" id="nav-home" clstag="homepage|keycount|home2013|07a"><a href="/">首页</a></li>
-					<li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="http://fashion.jd.com/">服装城</a></li>
-					<li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="http://channel.jd.com/chaoshi.html">食品</a></li>
-					<li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07d"><a href="http://tuan.jd.com/" target="_blank">团购</a></li>
-					<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://auction.jd.com/">夺宝岛</a></li>
-					<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://red.jd.com/" target="_blank">闪购</a></li>
-					<li class="fore7" id="nav-jinrong" clstag="homepage|keycount|home2013|07g1"><a href="http://jr.jd.com/" target="_blank">金融</a></li>
+					<li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="http://fashion.tt.com/">服装城</a></li>
+					<li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="http://channel.tt.com/chaoshi.html">食品</a></li>
+					<li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07d"><a href="http://tuan.tt.com/" target="_blank">团购</a></li>
+					<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://auction.tt.com/">夺宝岛</a></li>
+					<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://red.tt.com/" target="_blank">闪购</a></li>
+					<li class="fore7" id="nav-jinrong" clstag="homepage|keycount|home2013|07g1"><a href="http://jr.tt.com/" target="_blank">金融</a></li>
 				</ul>
 		</div>
 	</div>
