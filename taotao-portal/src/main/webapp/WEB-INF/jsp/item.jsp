@@ -17,7 +17,7 @@
 				skuid: 1221882,
 				name: '\u957f\u8679\uff08\u0043\u0048\u0041\u004e\u0047\u0048\u004f\u004e\u0047\uff09\u004c\u0045\u0044\u0034\u0032\u0035\u0033\u0038\u0045\u0053\u0020\u0034\u0032\u82f1\u5bf8\u0020\u7a84\u8fb9\u84dd\u5149\u004c\u0045\u0044\u6db2\u6676\u7535\u89c6\uff08\u9ed1\u8272\uff09',
 				skuidkey:'E804B1D153D29E36088A33A134D85EEA',
-				href: 'http://item.jd.com/1221882.html',
+				href: 'http://item.tt.com/1221882.html',
 				src: 'jfs/t304/157/750353441/93159/e4ee9876/54227256N20d4f5ec.jpg',
 				cat: [737,794,798],
 				brand: 20710,
@@ -35,13 +35,13 @@
 	</script>
 </head>
 <body version="140120">
-<script type="text/javascript">try{(function(flag){ if(!flag){return;} if(window.location.hash == '#m'){var exp = new Date();exp.setTime(exp.getTime() + 30 * 24 * 60 * 60 * 1000);document.cookie = "pcm=1;expires=" + exp.toGMTString() + ";path=/;domain=jd.com";return;}else{var cook=document.cookie.match(new RegExp("(^| )pcm=([^;]*)(;|$)"));var flag=false;if(cook&&cook.length>2&&unescape(cook[2])=="1"){flag=true;}} var userAgent = navigator.userAgent; if(userAgent){ userAgent = userAgent.toUpperCase();if(userAgent.indexOf("PAD")>-1){return;} var mobilePhoneList = ["IOS","IPHONE","ANDROID","WINDOWS PHONE"];for(var i=0,len=mobilePhoneList.length;i<len;i++){ if(userAgent.indexOf(mobilePhoneList[i])>-1){var url="http://m.jd.com/product/"+pageConfig.product.skuid+".html";if(flag){pageConfig.product.showtouchurl=true;}else{window.location.href = url;}break;}}}})((function(){var json={"6881":3,"1195":3,"10011":3,"6980":3,"12360":3};if(json[pageConfig.product.cat[0]+""]==1||json[pageConfig.product.cat[1]+""]==2||json[pageConfig.product.cat[2]+""]==3){return false;}else{return true;}})());}catch(e){}</script>
+<script type="text/javascript">try{(function(flag){ if(!flag){return;} if(window.location.hash == '#m'){var exp = new Date();exp.setTime(exp.getTime() + 30 * 24 * 60 * 60 * 1000);document.cookie = "pcm=1;expires=" + exp.toGMTString() + ";path=/;domain=tt.com";return;}else{var cook=document.cookie.match(new RegExp("(^| )pcm=([^;]*)(;|$)"));var flag=false;if(cook&&cook.length>2&&unescape(cook[2])=="1"){flag=true;}} var userAgent = navigator.userAgent; if(userAgent){ userAgent = userAgent.toUpperCase();if(userAgent.indexOf("PAD")>-1){return;} var mobilePhoneList = ["IOS","IPHONE","ANDROID","WINDOWS PHONE"];for(var i=0,len=mobilePhoneList.length;i<len;i++){ if(userAgent.indexOf(mobilePhoneList[i])>-1){var url="http://m.tt.com/product/"+pageConfig.product.skuid+".html";if(flag){pageConfig.product.showtouchurl=true;}else{window.location.href = url;}break;}}}})((function(){var json={"6881":3,"1195":3,"10011":3,"6980":3,"12360":3};if(json[pageConfig.product.cat[0]+""]==1||json[pageConfig.product.cat[1]+""]==2||json[pageConfig.product.cat[2]+""]==3){return false;}else{return true;}})());}catch(e){}</script>
 <!-- header start -->
 <jsp:include page="commons/header.jsp" />
 <!-- header end -->
 <div class="w">
 	<div class="breadcrumb">
-		<strong><a href="http://channel.jd.com/electronic.html">家用电器</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.jd.com/737-794.html" >大 家 电</a>&nbsp;&gt;&nbsp;<a href="http://list.jd.com/737-794-798.html" >平板电视</a>&nbsp;&gt;&nbsp;</span><script type="text/javascript">pageConfig.product.cat=[737,794,798];</script><span><a href="http://www.jd.com/pinpai/798-20710.html" >长虹（CHANGHONG）</a>&nbsp;&gt;&nbsp;<a href="http://item.jd.com/1221882.html" >长虹LED42538ES</a></span>
+		<strong><a href="http://channel.tt.com/electronic.html">家用电器</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.tt.com/737-794.html" >大 家 电</a>&nbsp;&gt;&nbsp;<a href="http://list.tt.com/737-794-798.html" >平板电视</a>&nbsp;&gt;&nbsp;</span><script type="text/javascript">pageConfig.product.cat=[737,794,798];</script><span><a href="http://www.tt.com/pinpai/798-20710.html" >长虹（CHANGHONG）</a>&nbsp;&gt;&nbsp;<a href="http://item.tt.com/1221882.html" >长虹LED42538ES</a></span>
 	</div>
 </div><!--breadcrumb end-->
 <div class="w">
@@ -104,12 +104,12 @@
 	<dl class="slogens">
 		<dt>淘淘·正品保证</dt>
 		<dd class="fore1">
-			<a target="_blank" href="http://help.360buy.com/help/question-67.html"><b></b><span>货到</span><span>付款</span></a>
+			<a target="_blank" href="http://help.tt.com/help/question-67.html"><b></b><span>货到</span><span>付款</span></a>
 		</dd>
 		<dd class="fore2"></dd>
-		<dd class="fore3"><a target="_blank" href="http://help.360buy.com/help/question-65.html"><b></b><span>满39</span><span>免运费</span></a></dd>
+		<dd class="fore3"><a target="_blank" href="http://help.tt.com/help/question-65.html"><b></b><span>满39</span><span>免运费</span></a></dd>
 		<dd class="fore4"></dd>
-		<dd class="fore5"><a target="_blank" href="http://help.360buy.com/help/question-97.html"><b></b><span>售后</span><span>上门</span></a></dd>
+		<dd class="fore5"><a target="_blank" href="http://help.tt.com/help/question-97.html"><b></b><span>售后</span><span>上门</span></a></dd>
 	</dl>
 	 <div class="seller hide">
 		    <p class="seller-link"></p>
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 			<div id="short-share">
-				<div id="view-bigimg" class="fl"><b></b><a href="http://www.jd.com/bigimage.aspx?id=1221882" target="_blank">查看大图</a></div>
+				<div id="view-bigimg" class="fl"><b></b><a href="http://www.tt.com/bigimage.aspx?id=1221882" target="_blank">查看大图</a></div>
 				<div id="share-list" class="share-list" clstag="shangpin|keycount|product|share">
 	<div class="share-bd">
 		<em class="share-hd">分享到：</em>
@@ -211,7 +211,7 @@
 				<ul class="detail-list">
 					<li title="长虹LED42538ES">商品名称：长虹LED42538ES</li>
 					<li>商品编号：1221882</li>
-					<li>品牌：<a href="http://www.jd.com/pinpai/798-20710.html" target="_blank">长虹（CHANGHONG）</a></li>
+					<li>品牌：<a href="http://www.tt.com/pinpai/798-20710.html" target="_blank">长虹（CHANGHONG）</a></li>
 					<li>上架时间：2014-09-24 15:45:26</li>
 					<li>商品毛重：13.5kg</li>
 					<li>商品产地：中国大陆</li>
@@ -234,7 +234,7 @@
 			<!--知识库二级标签、标题-->
             <div id="promises">
 	<strong>服务承诺：</strong><br />
-	淘淘向您保证所售商品均为正品行货，淘淘自营商品开具机打发票或电子发票。凭质保证书及淘淘发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由淘淘联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。淘淘还为您提供具有竞争力的商品价格和<a href="http://www.jd.com/help/kdexpress.aspx" target="_blank">运费政策</a>，请您放心购买！
+	淘淘向您保证所售商品均为正品行货，淘淘自营商品开具机打发票或电子发票。凭质保证书及淘淘发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由淘淘联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。淘淘还为您提供具有竞争力的商品价格和<a href="http://www.tt.com/help/kdexpress.aspx" target="_blank">运费政策</a>，请您放心购买！
 	<br /><br />
 	注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！ 
 </div>
@@ -246,8 +246,8 @@
 	</div><!--right end-->
 	
 	<div class="left">
-		<div id="miaozhen7886" class="m"><a href="http://c.nfa.jd.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=http://sale.jd.com/act/IFkpQYSVnG1Jet.html" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
-		<div id="miaozhen7886" class="m"><a href="http://c.nfa.jd.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=http://sale.jd.com/act/IFkpQYSVnG1Jet.html" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
+		<div id="miaozhen7886" class="m"><a href="http://c.nfa.tt.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=http://sale.tt.com/act/IFkpQYSVnG1Jet.html" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
+		<div id="miaozhen7886" class="m"><a href="http://c.nfa.tt.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=http://sale.tt.com/act/IFkpQYSVnG1Jet.html" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
 	</div><!--left end-->
 	<span class="clr"></span>
 </div>

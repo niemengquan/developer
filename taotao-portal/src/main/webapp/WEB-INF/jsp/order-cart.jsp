@@ -118,9 +118,9 @@
 					<div class="payment-item item-selected online-payment "
 						for="pay-method-1" payname="货到付款" payid="1">
 						<b></b> 货到付款<span class="qmark-icon qmark-tip"
-							data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 <a href='http://help.jd.com/help/distribution-768-2-2813-2863-0-1410707152669.html' target='_blank' class='ftx-05'>查看服务及配送范围</a>"></span>
-						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
-						<!-- span class="qmark-icon qmark-tip" data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 <a target='_blank' href='http://psfw.jd.com/help/distribution-768.html-2-2825-2893-0-1427094595258.html'>查看服务及配送范围</a>"></span -->
+							data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 <a href='http://help.tt.com/help/distribution-768-2-2813-2863-0-1410707152669.html' target='_blank' class='ftx-05'>查看服务及配送范围</a>"></span>
+						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.tt.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
+						<!-- span class="qmark-icon qmark-tip" data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 <a target='_blank' href='http://psfw.tt.com/help/distribution-768.html-2-2825-2893-0-1427094595258.html'>查看服务及配送范围</a>"></span -->
 					</div>
 				</li>
 				<li style="cursor: pointer;" onclick="save_Pay(4);">
@@ -130,9 +130,9 @@
 						<b></b> 在线支付 <font class="whiteBarSpanClass hide"
 							color="#FF6600">[支持打白条]</font> <span
 							class="qmark-icon qmark-tip"
-							data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a href='http://www.jd.com/help/onlinepay.aspx' target='_blank' class='ftx-05'> 查看银行及限额</a>"></span>
-						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
-						<!-- span class="qmark-icon qmark-tip" data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a target='_blank' href='http://www.jd.com/help/onlinepay.aspx'>查看银行及限额</a>"></span -->
+							data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a href='http://www.tt.com/help/onlinepay.aspx' target='_blank' class='ftx-05'> 查看银行及限额</a>"></span>
+						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.tt.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
+						<!-- span class="qmark-icon qmark-tip" data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a target='_blank' href='http://www.tt.com/help/onlinepay.aspx'>查看银行及限额</a>"></span -->
 					</div>
 				</li>
 
@@ -141,9 +141,9 @@
 					<div class="payment-item online-payment "
 						for="pay-method-5" payname="公司转账" payid="5">
 						<b></b> 公司转账 <span class="qmark-icon qmark-tip"
-							data-tips="通过快钱平台转账 转帐后1-3个工作日内到帐 <a href='http://help.jd.com/help/question-70.html' target='_blank' class='ftx-05'>查看帐户信息</a>"></span>
-						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
-						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台转账 转帐后1-3个工作日内到帐 <a target='_blank' href='http://help.jd.com/help/question-70.html'>查看帐户信息</a>"></span -->
+							data-tips="通过快钱平台转账 转帐后1-3个工作日内到帐 <a href='http://help.tt.com/help/question-70.html' target='_blank' class='ftx-05'>查看帐户信息</a>"></span>
+						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.tt.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
+						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台转账 转帐后1-3个工作日内到帐 <a target='_blank' href='http://help.tt.com/help/question-70.html'>查看帐户信息</a>"></span -->
 					</div>
 				</li>
 				<li style="cursor: pointer;" onclick="save_Pay(2); ">
@@ -151,9 +151,9 @@
 					<div class="payment-item  online-payment "
 						for="pay-method-2" payname="邮局汇款" payid="2">
 						<b></b> 邮局汇款 <span class="qmark-icon qmark-tip"
-							data-tips="通过快钱平台收款 汇款后1-3个工作日到账 <a href='http://help.jd.com/help/question-69.html' target='_blank' class='ftx-05'>查看帮助</a>"></span>
-						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
-						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台收款  汇款后1-3个工作日到账 <a target='_blank' href='http://help.jd.com/help/question-69.html'>查看帮助</a>"></span -->
+							data-tips="通过快钱平台收款 汇款后1-3个工作日到账 <a href='http://help.tt.com/help/question-69.html' target='_blank' class='ftx-05'>查看帮助</a>"></span>
+						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.tt.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
+						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台收款  汇款后1-3个工作日到账 <a target='_blank' href='http://help.tt.com/help/question-69.html'>查看帮助</a>"></span -->
 					</div>
 				</li> 
 				<!--div id="shipment"></div--> 
