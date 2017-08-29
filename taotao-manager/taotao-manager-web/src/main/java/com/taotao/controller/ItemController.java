@@ -52,5 +52,12 @@ public class ItemController {
         return result;
     }
 
+    @RequestMapping(value = "/delete")
+    @ResponseBody
+    public TaotaoResult deleteItemByIds(String[] ids){
+        TaotaoResult result=this.itemService.deleteItemByIds(ids);
+        return result;
+    }
+
 
 }
