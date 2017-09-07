@@ -30,7 +30,7 @@
     </tx:advice>
     <!--切面-->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.taotao.search.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.taotao.sso.service.*.*(..))"/>
     </aop:config>
     <!--&lt;!&ndash; 开启事务控制的注解支持 &ndash;&gt;
     <tx:annotation-driven transaction-manager="transactionManager"/>-->
