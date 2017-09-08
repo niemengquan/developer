@@ -45,5 +45,5 @@ public interface UserService {
      * @param token
      * @return
      */
-    TaotaoResult logoutByToken(String token);
+    TaotaoResult logoutByToken(HttpServletRequest request, HttpServletResponse response,String token);
 }

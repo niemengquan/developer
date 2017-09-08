@@ -87,12 +87,12 @@ public class UserController {
         }
     }
 
-    @RequestMapping("/logout/{tocken}")
+    @RequestMapping("/logout/{token}")
     @ResponseBody
-    public Object logoutByToken(@PathVariable String token,String callback){
+    public Object logoutByToken(HttpServletRequest request, HttpServletResponse response,@PathVariable String token,String callback){
         TaotaoResult result;
         try {
-            result=this.userService.logoutByToken(token);
+            result=this.userService.logoutByToken(request,response,token);
         }catch (Exception err){
             err.printStackTrace();
             result=TaotaoResult.build(500,ExceptionUtil.getStackTrace(err));

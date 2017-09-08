@@ -116,8 +116,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public TaotaoResult logoutByToken(String token) {
+    public TaotaoResult logoutByToken(HttpServletRequest request, HttpServletResponse response,String token) {
         this.jedisClient.del(REIDS_USER_SESSION_KEY + ":" + token);
+        //删除cookie
+        CookieUtils.deleteCookie(request,response,"TT_TOKEN");
         return TaotaoResult.ok("OK");
     }
 }
