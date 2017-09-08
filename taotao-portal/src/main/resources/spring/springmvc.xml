@@ -17,4 +17,12 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+       <mvc:interceptor>
+           <!--拦截订单类的请求-->
+           <mvc:mapping path="/item/**"/>
+           <bean class="com.taotao.portal.interceptor.LoginInterceptor"/>
+       </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
